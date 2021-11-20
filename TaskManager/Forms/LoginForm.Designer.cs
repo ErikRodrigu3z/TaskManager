@@ -86,6 +86,7 @@
             this.rjImageColorOverlay2.OverlayColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.rjImageColorOverlay2.Size = new System.Drawing.Size(320, 246);
             this.rjImageColorOverlay2.TabIndex = 37;
+            this.rjImageColorOverlay2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.rjImageColorOverlay2_MouseDown);
             // 
             // lblDescription
             // 

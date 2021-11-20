@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using TaskManager.Forms.ChildForms;
 using TaskManager.Helpers;
 using TaskManager.Models;
 
@@ -41,20 +42,25 @@ namespace TaskManager.Forms
         private void User_Control_Close(object sender, EventArgs e)
         {
             FormHelper.CloseForm(this);
-        } 
+        }
         #endregion
 
+        #region Menu buttons events
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            FormHelper.SetActiveButtonMenu(btnHome);
+            FormHelper.CloseAllForms(pMain);
+            
+        }
+        private void btnNotes_Click(object sender, EventArgs e)
+        {
+            Notes notes = new Notes();
+            FormHelper.OpenChildForm(notes, pMain);
+            FormHelper.SetActiveButtonMenu(btnNotes);
+        }
+        #endregion
 
-
-       
-
-       
-
-        
-
-       
-
-        #region Drag Form
+        #region Drag Form and drag objects "panels, etc"
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
@@ -64,15 +70,41 @@ namespace TaskManager.Forms
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+        private void pTop_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
 
+        private void pRight_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
 
+        private void pMain_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
 
+        private void pMenu_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
         #endregion
 
-        private void btnHome_Click(object sender, EventArgs e)
+
+       
+        private void MainForm_Load(object sender, EventArgs e)
         {
-            btnHome.BackColor = System.Drawing.Color.FromArgb(64,64,64);
-            MessageBox.Show("erik");
+           
         }
+
+
+
+
+
     }
 }

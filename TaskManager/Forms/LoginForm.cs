@@ -43,8 +43,7 @@ namespace TaskManager.Forms
         {
             if (e.KeyCode == Keys.Enter)
                 Login();
-        }
-       
+        }       
        
         private void btnLogin_Click(object sender, EventArgs e)
         {
@@ -54,13 +53,6 @@ namespace TaskManager.Forms
         {
             Process.Start("https://github.com/ErikRodrigu3z");
         }
-
-       
-
-
-
-
-
 
         #region Methods
         public void Login()
@@ -121,9 +113,11 @@ namespace TaskManager.Forms
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
-
-
-
+        private void rjImageColorOverlay2_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
         #endregion
 
     }
