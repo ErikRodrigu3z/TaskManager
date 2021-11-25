@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("TaskManager")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Applicaciòn de escritorio portable, con base de datos sqlite")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("TaskManager")]

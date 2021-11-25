@@ -45,7 +45,7 @@
             this.biFacebook = new RJCodeUI_M1.RJControls.RJMenuIcon();
             this.txtEmail = new RJCodeUI_M1.RJControls.RJTextBox();
             this.txtPassword = new RJCodeUI_M1.RJControls.RJTextBox();
-            this.minCloseButtons1 = new TaskManager.UserControls.MinCloseButtons();
+            this.minCloseButtons = new TaskManager.UserControls.MinCloseButtons();
             this.pLogin.SuspendLayout();
             this.rjImageColorOverlay2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.icoPassword)).BeginInit();
@@ -335,13 +335,13 @@
             this.txtPassword.TabIndex = 43;
             this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
             // 
-            // minCloseButtons1
+            // minCloseButtons
             // 
-            this.minCloseButtons1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.minCloseButtons1.Location = new System.Drawing.Point(576, -2);
-            this.minCloseButtons1.Name = "minCloseButtons1";
-            this.minCloseButtons1.Size = new System.Drawing.Size(56, 25);
-            this.minCloseButtons1.TabIndex = 44;
+            this.minCloseButtons.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.minCloseButtons.Location = new System.Drawing.Point(575, -1);
+            this.minCloseButtons.Name = "minCloseButtons";
+            this.minCloseButtons.Size = new System.Drawing.Size(56, 25);
+            this.minCloseButtons.TabIndex = 44;
             // 
             // LoginForm
             // 
@@ -349,7 +349,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(631, 246);
-            this.Controls.Add(this.minCloseButtons1);
+            this.Controls.Add(this.minCloseButtons);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.biYoutube);
@@ -400,7 +400,7 @@
         private RJCodeUI_M1.RJControls.RJMenuIcon biGitHub;
         private RJCodeUI_M1.RJControls.RJMenuIcon biFacebook;
         private RJCodeUI_M1.RJControls.RJTextBox txtEmail;
-        private RJCodeUI_M1.RJControls.RJTextBox txtPassword;
-        private UserControls.MinCloseButtons minCloseButtons1;
+        private RJCodeUI_M1.RJControls.RJTextBox txtPassword;       
+        private UserControls.MinCloseButtons minCloseButtons;
     }
 }

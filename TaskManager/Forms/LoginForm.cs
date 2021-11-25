@@ -3,19 +3,28 @@ using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using TaskManager.Helpers;
+using TaskManager.Models;
+using TaskManager.Repository.UserRepository;
 
 namespace TaskManager.Forms
 {
     public partial class LoginForm : Form
     {
+        private readonly IUserRepo _user;
         public LoginForm()
         {
             InitializeComponent();
 
             #region user control event handlers
-            minCloseButtons1.ButtonClose += new EventHandler(User_Control_Close);
-            minCloseButtons1.ButtonMinimize += new EventHandler(User_Control_Minimize);
+            minCloseButtons.ButtonClose += new EventHandler(User_Control_Close);
+            minCloseButtons.ButtonMinimize += new EventHandler(User_Control_Minimize);
             #endregion
+
+            _user = new UserRepo();
+
+          
+           
+
         }
 
         #region Use control events

@@ -4,11 +4,13 @@ using System.Windows.Forms;
 using TaskManager.Forms.ChildForms;
 using TaskManager.Helpers;
 using TaskManager.Models;
+using TaskManager.Repository.CategoryRepo;
 
 namespace TaskManager.Forms
 {
     public partial class MainForm : Form
     {
+        private readonly ICategoryRepo _catRepo;
 
         public MainForm()
         {
@@ -18,9 +20,10 @@ namespace TaskManager.Forms
             maxRestMinButtons1.ButtonClose += new EventHandler(User_Control_Close);
             maxRestMinButtons1.ButtonMinimize += new EventHandler(User_Control_Minimize);
             maxRestMinButtons1.ButtonMaximize += new EventHandler(User_Control_Maximize);
-            maxRestMinButtons1.ButtonRestore += new EventHandler(User_Control_Restore); 
+            maxRestMinButtons1.ButtonRestore += new EventHandler(User_Control_Restore);
             #endregion
 
+            _catRepo = new CategoryRepo();
         }
 
         #region User control events
@@ -103,7 +106,11 @@ namespace TaskManager.Forms
         }
 
 
+        #region Methods
 
+        
+
+        #endregion
 
 
     }
