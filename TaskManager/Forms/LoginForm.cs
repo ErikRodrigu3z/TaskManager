@@ -11,6 +11,8 @@ namespace TaskManager.Forms
     public partial class LoginForm : Form
     {
         private readonly IUserRepo _user;
+
+        #region Constructor
         public LoginForm()
         {
             InitializeComponent();
@@ -22,10 +24,11 @@ namespace TaskManager.Forms
 
             _user = new UserRepo();
 
-          
-           
 
-        }
+
+
+        } 
+        #endregion
 
         #region Use control events
         private void User_Control_Minimize(object sender, EventArgs e)
@@ -37,33 +40,53 @@ namespace TaskManager.Forms
         {
             this.Dispose();
             Application.Exit();
-        } 
+        }
         #endregion
 
+        #region Form events
         private void Login_Load(object sender, EventArgs e)
-        {            
-           
+        {
+
         }
         public void MainForm_Logout(object sender, FormClosedEventArgs e)
         {
             Logout();//Log out
         }
+        #endregion
+
+        #region Control events
         private void txtPassword_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
                 Login();
-        }       
-       
+        }
+
         private void btnLogin_Click(object sender, EventArgs e)
-        {           
-            
-            MessageHelper.Show("mensaje","Mensaje de prueba",MessageBoxButtons.OK,MessageBoxIcon.Stop);
+        {
+            //MessageHelper.Show("mensaje","Mensaje de prueba",MessageBoxButtons.OK,MessageBoxIcon.Stop);
             Login();
         }
+
         private void biGitHub_Click(object sender, EventArgs e)
         {
             Process.Start("https://github.com/ErikRodrigu3z");
         }
+
+        private void biFacebook_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://www.facebook.com/erik.gallegos.969300/");
+        }
+
+        private void biYoutube_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://www.youtube.com/channel/UCDmpUcFAo-AgWaMOB6PyiMQ");
+        }
+
+        private void biWebPage_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://kybalionsoft.com/");
+        } 
+        #endregion
 
         #region Methods
         public void Login()
@@ -129,6 +152,17 @@ namespace TaskManager.Forms
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+        private void picLogo_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+        private void lblLogin_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
         #endregion
 
     }

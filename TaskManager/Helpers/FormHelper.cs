@@ -47,7 +47,7 @@ namespace TaskManager.Helpers
 
             form.Show();
         }
-        public static void CloseForm(Form form)
+        public static void CloseApp(Form form)
         {
             if (form.Name == nameof(MainForm))
             {
@@ -56,7 +56,17 @@ namespace TaskManager.Helpers
             }
             form.Dispose();
         }
-        public static void CloseAllForms(Panel panel)
+        public static void CloseMain(Form form) 
+        {            
+            form.Dispose();
+            LoginForm login = new LoginForm();
+            Show(login);
+        }
+        public static void CloseForm(Form form)
+        {           
+            form.Dispose();
+        }
+        public static void CloseAllChildForms(Panel panel) 
         {
             panel.Controls.Clear();
             panel.AutoScrollMinSize = new System.Drawing.Size(0, 0);

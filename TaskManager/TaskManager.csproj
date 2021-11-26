@@ -51,7 +51,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Set de Halloween - Génesis Toxical %288%29.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\Set de Halloween - Génesis Toxical %288%29.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CommonServiceLocator, Version=2.0.6.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
@@ -381,8 +381,11 @@
     <None Include="Resources\BackImage.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="favicon.ico" />
     <Content Include="Resources\CloseDark.png" />
     <Content Include="Resources\CloseWhite.png" />
+    <None Include="Resources\kybalionsoft.png" />
+    <None Include="Resources\favicon.ico" />
     <Content Include="Resources\MaximizeDark.png" />
     <Content Include="Resources\MaximizeWhite.png" />
     <Content Include="Resources\MinimizeDark.png" />

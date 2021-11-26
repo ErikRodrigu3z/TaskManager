@@ -15,6 +15,7 @@ namespace TaskManager.Forms.ChildForms
             InitializeComponent();
             _CatRepo = new CategoryRepo();
             toolTip = new CustomToolTip();
+            FillCmbCategory();
         }
 
         #region Form events
@@ -24,7 +25,6 @@ namespace TaskManager.Forms.ChildForms
             toolTip.SetToolTip(this.btnAddCategory, "Add Category \n ");
             toolTip.SetToolTip(this.btnCopy, "Copy Content \n ");
 
-            FillCmbCategory();
         }
 
         #endregion

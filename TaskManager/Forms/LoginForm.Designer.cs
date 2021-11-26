@@ -34,7 +34,7 @@
             this.lblDescription = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.picLogo = new System.Windows.Forms.PictureBox();
             this.lblMessage = new System.Windows.Forms.Label();
             this.icoPassword = new FontAwesome.Sharp.IconPictureBox();
             this.icoUser = new FontAwesome.Sharp.IconPictureBox();
@@ -46,8 +46,10 @@
             this.txtEmail = new RJCodeUI_M1.RJControls.RJTextBox();
             this.txtPassword = new RJCodeUI_M1.RJControls.RJTextBox();
             this.minCloseButtons = new TaskManager.UserControls.MinCloseButtons();
+            this.lblLogin = new System.Windows.Forms.Label();
             this.pLogin.SuspendLayout();
             this.rjImageColorOverlay2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.icoPassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.icoUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.biYoutube)).BeginInit();
@@ -75,7 +77,7 @@
             this.rjImageColorOverlay2.Controls.Add(this.lblDescription);
             this.rjImageColorOverlay2.Controls.Add(this.lblTitle);
             this.rjImageColorOverlay2.Controls.Add(this.label2);
-            this.rjImageColorOverlay2.Controls.Add(this.label1);
+            this.rjImageColorOverlay2.Controls.Add(this.picLogo);
             this.rjImageColorOverlay2.Customizable = true;
             this.rjImageColorOverlay2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rjImageColorOverlay2.Image = ((System.Drawing.Image)(resources.GetObject("rjImageColorOverlay2.Image")));
@@ -94,13 +96,13 @@
             this.lblDescription.BackColor = System.Drawing.Color.Transparent;
             this.lblDescription.Font = new System.Drawing.Font("Verdana", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescription.ForeColor = System.Drawing.Color.Silver;
-            this.lblDescription.Location = new System.Drawing.Point(84, 205);
+            this.lblDescription.Location = new System.Drawing.Point(23, 205);
             this.lblDescription.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(234, 32);
+            this.lblDescription.Size = new System.Drawing.Size(264, 32);
             this.lblDescription.TabIndex = 4;
-            this.lblDescription.Text = "Custom themes, styles, forms and\r\ncontrols for WinForm";
-            this.lblDescription.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblDescription.Text = ".Net, .Net Core developing\r\ntrue passion for software development";
+            this.lblDescription.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // lblTitle
             // 
@@ -108,12 +110,12 @@
             this.lblTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblTitle.Font = new System.Drawing.Font("Verdana", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.Silver;
-            this.lblTitle.Location = new System.Drawing.Point(10, 38);
+            this.lblTitle.Location = new System.Drawing.Point(10, 11);
             this.lblTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(302, 25);
+            this.lblTitle.Size = new System.Drawing.Size(255, 25);
             this.lblTitle.TabIndex = 5;
-            this.lblTitle.Text = "RJ Code Modern UI Template";
+            this.lblTitle.Text = "Portable Win Forms App";
             // 
             // label2
             // 
@@ -121,24 +123,24 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Silver;
-            this.label2.Location = new System.Drawing.Point(134, 63);
+            this.label2.Location = new System.Drawing.Point(134, 44);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(178, 17);
+            this.label2.Size = new System.Drawing.Size(182, 17);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Opacity 65 + Border radius";
+            this.label2.Text = "Repository pattern, SQLITE";
             // 
-            // label1
+            // picLogo
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DarkGray;
-            this.label1.Location = new System.Drawing.Point(112, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 32);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "Login";
+            this.picLogo.BackColor = System.Drawing.Color.Transparent;
+            this.picLogo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picLogo.Image = global::TaskManager.Properties.Resources.kybalionsoft;
+            this.picLogo.Location = new System.Drawing.Point(0, 0);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(320, 246);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picLogo.TabIndex = 45;
+            this.picLogo.TabStop = false;
+            this.picLogo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picLogo_MouseDown);
             // 
             // lblMessage
             // 
@@ -227,6 +229,7 @@
             this.biYoutube.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.biYoutube.TabIndex = 42;
             this.biYoutube.TabStop = false;
+            this.biYoutube.Click += new System.EventHandler(this.biYoutube_Click);
             // 
             // biWebPage
             // 
@@ -246,6 +249,7 @@
             this.biWebPage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.biWebPage.TabIndex = 41;
             this.biWebPage.TabStop = false;
+            this.biWebPage.Click += new System.EventHandler(this.biWebPage_Click);
             // 
             // biGitHub
             // 
@@ -285,6 +289,7 @@
             this.biFacebook.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.biFacebook.TabIndex = 39;
             this.biFacebook.TabStop = false;
+            this.biFacebook.Click += new System.EventHandler(this.biFacebook_Click);
             // 
             // txtEmail
             // 
@@ -343,6 +348,20 @@
             this.minCloseButtons.Size = new System.Drawing.Size(56, 25);
             this.minCloseButtons.TabIndex = 44;
             // 
+            // lblLogin
+            // 
+            this.lblLogin.AutoSize = true;
+            this.lblLogin.BackColor = System.Drawing.Color.Transparent;
+            this.lblLogin.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogin.ForeColor = System.Drawing.Color.DarkGray;
+            this.lblLogin.Location = new System.Drawing.Point(432, -4);
+            this.lblLogin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblLogin.Name = "lblLogin";
+            this.lblLogin.Size = new System.Drawing.Size(98, 32);
+            this.lblLogin.TabIndex = 18;
+            this.lblLogin.Text = "Login";
+            this.lblLogin.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lblLogin_MouseDown);
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -352,6 +371,7 @@
             this.Controls.Add(this.minCloseButtons);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.lblLogin);
             this.Controls.Add(this.biYoutube);
             this.Controls.Add(this.biWebPage);
             this.Controls.Add(this.biGitHub);
@@ -372,6 +392,7 @@
             this.pLogin.ResumeLayout(false);
             this.rjImageColorOverlay2.ResumeLayout(false);
             this.rjImageColorOverlay2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.icoPassword)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.icoUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.biYoutube)).EndInit();
@@ -393,7 +414,6 @@
         private System.Windows.Forms.Label lblDescription;
         private RJCodeUI_M1.RJControls.RJImageColorOverlay rjImageColorOverlay2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private RJCodeUI_M1.RJControls.RJButton btnLogin;
         private RJCodeUI_M1.RJControls.RJMenuIcon biYoutube;
         private RJCodeUI_M1.RJControls.RJMenuIcon biWebPage;
@@ -402,5 +422,7 @@
         private RJCodeUI_M1.RJControls.RJTextBox txtEmail;
         private RJCodeUI_M1.RJControls.RJTextBox txtPassword;       
         private UserControls.MinCloseButtons minCloseButtons;
+        private System.Windows.Forms.PictureBox picLogo;
+        private System.Windows.Forms.Label lblLogin;
     }
 }

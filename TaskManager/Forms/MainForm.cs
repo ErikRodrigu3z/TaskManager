@@ -46,7 +46,7 @@ namespace TaskManager.Forms
 
         private void User_Control_Close(object sender, EventArgs e)
         {
-            FormHelper.CloseForm(this);
+            FormHelper.CloseMain(this);
         }
         #endregion
 
@@ -59,7 +59,7 @@ namespace TaskManager.Forms
         private void btnHome_Click(object sender, EventArgs e)
         {
             FormHelper.SetActiveButtonMenu(btnHome);
-            FormHelper.CloseAllForms(pMain);
+            FormHelper.CloseAllChildForms(pMain);
         }
         #endregion
 
@@ -114,5 +114,6 @@ namespace TaskManager.Forms
 
         #endregion
 
+        
     }
 }
