@@ -55,7 +55,9 @@ namespace TaskManager.Forms
         }       
        
         private void btnLogin_Click(object sender, EventArgs e)
-        {
+        {           
+            
+            MessageHelper.Show("mensaje","Mensaje de prueba",MessageBoxButtons.OK,MessageBoxIcon.Stop);
             Login();
         }
         private void biGitHub_Click(object sender, EventArgs e)

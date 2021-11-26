@@ -297,6 +297,13 @@
     <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Modals\MessageModal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Modals\MessageModal.Designer.cs">
+      <DependentUpon>MessageModal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\MessageHelper.cs" />
     <Compile Include="UserControls\CustomToolTip.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -336,6 +343,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Modals\MessageModal.resx">
+      <DependentUpon>MessageModal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

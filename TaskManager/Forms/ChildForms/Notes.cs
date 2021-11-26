@@ -17,6 +17,7 @@ namespace TaskManager.Forms.ChildForms
             toolTip = new CustomToolTip();
         }
 
+        #region Form events
         private void Notes_Load(object sender, EventArgs e)
         {
             // Set up the ToolTip text for the Button and Checkbox.             
@@ -26,6 +27,42 @@ namespace TaskManager.Forms.ChildForms
             FillCmbCategory();
         }
 
+        #endregion
+
+        #region controls events
+        private void btnAddCategory_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Notes_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                MessageBox.Show("siiii");
+            }
+        }
+
+        private void btnClearArticle_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEditArticle_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCopy_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEditCategory_Click(object sender, EventArgs e)
+        {
+
+        } 
+        #endregion
 
         #region Methods
         public void FillCmbCategory()
@@ -41,17 +78,5 @@ namespace TaskManager.Forms.ChildForms
 
         #endregion
 
-        private void btnAddCategory_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Notes_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                MessageBox.Show("siiii");
-            }
-        }
     }
 }

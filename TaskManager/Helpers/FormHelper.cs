@@ -63,13 +63,14 @@ namespace TaskManager.Helpers
         }
         #endregion
 
+        #region Active, disable menu buttons
         public static void SetActiveButtonMenu(object button)
         {
             if (button != null)
             {
                 DisableButton();
                 currentBtn = (IconButton)button;
-                currentBtn.BackColor = Color.FromArgb(99, 99, 99);               
+                currentBtn.BackColor = Color.FromArgb(99, 99, 99);
             }
         }
 
@@ -80,9 +81,10 @@ namespace TaskManager.Helpers
                 currentBtn.BackColor = Color.Black;
             }
         }
+        #endregion
 
-
-        public static void WindowState(Form form) 
+        #region Form WindowState
+        public static void WindowState(Form form)
         {
             switch (formWinodowState)
             {
@@ -99,6 +101,7 @@ namespace TaskManager.Helpers
                     form.WindowState = FormWindowState.Normal;
                     break;
             }
-        }
+        } 
+        #endregion
     }
 }

@@ -30,15 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.pMenu = new System.Windows.Forms.Panel();
+            this.btnNotes = new FontAwesome.Sharp.IconButton();
             this.btnMenu = new RJCodeUI_M1.RJControls.RJMenuIcon();
-            this.btnNotes = new RJCodeUI_M1.RJControls.RJButton();
-            this.btnHome = new RJCodeUI_M1.RJControls.RJButton();
             this.pRight = new System.Windows.Forms.Panel();
-            this.maxRestMinButtons1 = new TaskManager.UserControls.MaxRestMinButtons();
             this.pTop = new System.Windows.Forms.Panel();
             this.rjButton2 = new RJCodeUI_M1.RJControls.RJButton();
             this.rjButton1 = new RJCodeUI_M1.RJControls.RJButton();
             this.pMain = new System.Windows.Forms.Panel();
+            this.btnHome = new FontAwesome.Sharp.IconButton();
+            this.maxRestMinButtons1 = new TaskManager.UserControls.MaxRestMinButtons();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.pMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).BeginInit();
             this.pRight.SuspendLayout();
@@ -50,14 +52,39 @@
             this.pMenu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.pMenu.BackColor = System.Drawing.Color.Black;
-            this.pMenu.Controls.Add(this.btnMenu);
-            this.pMenu.Controls.Add(this.btnNotes);
+            this.pMenu.Controls.Add(this.iconButton1);
+            this.pMenu.Controls.Add(this.iconButton2);
             this.pMenu.Controls.Add(this.btnHome);
+            this.pMenu.Controls.Add(this.btnNotes);
+            this.pMenu.Controls.Add(this.btnMenu);
             this.pMenu.Location = new System.Drawing.Point(-4, -3);
             this.pMenu.Name = "pMenu";
             this.pMenu.Size = new System.Drawing.Size(166, 645);
             this.pMenu.TabIndex = 3;
             this.pMenu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pMenu_MouseDown);
+            // 
+            // btnNotes
+            // 
+            this.btnNotes.FlatAppearance.BorderSize = 0;
+            this.btnNotes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.btnNotes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnNotes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNotes.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNotes.ForeColor = System.Drawing.Color.White;
+            this.btnNotes.IconChar = FontAwesome.Sharp.IconChar.BookDead;
+            this.btnNotes.IconColor = System.Drawing.Color.White;
+            this.btnNotes.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnNotes.IconSize = 35;
+            this.btnNotes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNotes.Location = new System.Drawing.Point(8, 94);
+            this.btnNotes.Name = "btnNotes";
+            this.btnNotes.Size = new System.Drawing.Size(150, 36);
+            this.btnNotes.TabIndex = 44;
+            this.btnNotes.Text = "Notes";
+            this.btnNotes.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNotes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnNotes.UseVisualStyleBackColor = true;
+            this.btnNotes.Click += new System.EventHandler(this.btnNotes_Click);
             // 
             // btnMenu
             // 
@@ -77,68 +104,6 @@
             this.btnMenu.TabIndex = 43;
             this.btnMenu.TabStop = false;
             // 
-            // btnNotes
-            // 
-            this.btnNotes.BackColor = System.Drawing.Color.Black;
-            this.btnNotes.BorderColor = System.Drawing.Color.Black;
-            this.btnNotes.BorderRadius = 0;
-            this.btnNotes.BorderSize = 0;
-            this.btnNotes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNotes.Design = RJCodeUI_M1.RJControls.ButtonDesign.Custom;
-            this.btnNotes.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnNotes.FlatAppearance.BorderSize = 0;
-            this.btnNotes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnNotes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnNotes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNotes.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNotes.ForeColor = System.Drawing.Color.White;
-            this.btnNotes.IconChar = FontAwesome.Sharp.IconChar.BookDead;
-            this.btnNotes.IconColor = System.Drawing.Color.White;
-            this.btnNotes.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnNotes.IconSize = 35;
-            this.btnNotes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNotes.Location = new System.Drawing.Point(1, 89);
-            this.btnNotes.Name = "btnNotes";
-            this.btnNotes.Size = new System.Drawing.Size(160, 40);
-            this.btnNotes.Style = RJCodeUI_M1.RJControls.ControlStyle.Solid;
-            this.btnNotes.TabIndex = 4;
-            this.btnNotes.Text = "Notes";
-            this.btnNotes.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNotes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnNotes.UseVisualStyleBackColor = false;
-            this.btnNotes.Click += new System.EventHandler(this.btnNotes_Click);
-            // 
-            // btnHome
-            // 
-            this.btnHome.BackColor = System.Drawing.Color.Black;
-            this.btnHome.BorderColor = System.Drawing.Color.Black;
-            this.btnHome.BorderRadius = 0;
-            this.btnHome.BorderSize = 0;
-            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnHome.Design = RJCodeUI_M1.RJControls.ButtonDesign.Custom;
-            this.btnHome.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnHome.FlatAppearance.BorderSize = 0;
-            this.btnHome.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHome.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHome.ForeColor = System.Drawing.Color.White;
-            this.btnHome.IconChar = FontAwesome.Sharp.IconChar.Home;
-            this.btnHome.IconColor = System.Drawing.Color.White;
-            this.btnHome.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnHome.IconSize = 35;
-            this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHome.Location = new System.Drawing.Point(3, 46);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(160, 40);
-            this.btnHome.Style = RJCodeUI_M1.RJControls.ControlStyle.Solid;
-            this.btnHome.TabIndex = 3;
-            this.btnHome.Text = "Home";
-            this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnHome.UseVisualStyleBackColor = false;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
-            // 
             // pRight
             // 
             this.pRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -149,15 +114,6 @@
             this.pRight.Size = new System.Drawing.Size(222, 625);
             this.pRight.TabIndex = 4;
             this.pRight.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pRight_MouseDown);
-            // 
-            // maxRestMinButtons1
-            // 
-            this.maxRestMinButtons1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.maxRestMinButtons1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.maxRestMinButtons1.Location = new System.Drawing.Point(130, -3);
-            this.maxRestMinButtons1.Name = "maxRestMinButtons1";
-            this.maxRestMinButtons1.Size = new System.Drawing.Size(94, 31);
-            this.maxRestMinButtons1.TabIndex = 2;
             // 
             // pTop
             // 
@@ -239,6 +195,82 @@
             this.pMain.TabIndex = 6;
             this.pMain.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pMain_MouseDown);
             // 
+            // btnHome
+            // 
+            this.btnHome.FlatAppearance.BorderSize = 0;
+            this.btnHome.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.btnHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.ForeColor = System.Drawing.Color.White;
+            this.btnHome.IconChar = FontAwesome.Sharp.IconChar.Home;
+            this.btnHome.IconColor = System.Drawing.Color.White;
+            this.btnHome.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnHome.IconSize = 35;
+            this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHome.Location = new System.Drawing.Point(8, 55);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(150, 36);
+            this.btnHome.TabIndex = 45;
+            this.btnHome.Text = "Notes";
+            this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnHome.UseVisualStyleBackColor = true;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            // 
+            // maxRestMinButtons1
+            // 
+            this.maxRestMinButtons1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.maxRestMinButtons1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.maxRestMinButtons1.Location = new System.Drawing.Point(130, -3);
+            this.maxRestMinButtons1.Name = "maxRestMinButtons1";
+            this.maxRestMinButtons1.Size = new System.Drawing.Size(94, 31);
+            this.maxRestMinButtons1.TabIndex = 2;
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.iconButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton1.ForeColor = System.Drawing.Color.White;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Home;
+            this.iconButton1.IconColor = System.Drawing.Color.White;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 35;
+            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton1.Location = new System.Drawing.Point(8, 133);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(150, 36);
+            this.iconButton1.TabIndex = 47;
+            this.iconButton1.Text = "Notes";
+            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton1.UseVisualStyleBackColor = true;
+            // 
+            // iconButton2
+            // 
+            this.iconButton2.FlatAppearance.BorderSize = 0;
+            this.iconButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.iconButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton2.ForeColor = System.Drawing.Color.White;
+            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.BookDead;
+            this.iconButton2.IconColor = System.Drawing.Color.White;
+            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton2.IconSize = 35;
+            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton2.Location = new System.Drawing.Point(8, 172);
+            this.iconButton2.Name = "iconButton2";
+            this.iconButton2.Size = new System.Drawing.Size(150, 36);
+            this.iconButton2.TabIndex = 46;
+            this.iconButton2.Text = "Notes";
+            this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton2.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -269,13 +301,15 @@
         #endregion
         private UserControls.MaxRestMinButtons maxRestMinButtons1;
         private System.Windows.Forms.Panel pMenu;
-        private RJCodeUI_M1.RJControls.RJButton btnHome;
         private System.Windows.Forms.Panel pRight;
         private System.Windows.Forms.Panel pTop;
         private System.Windows.Forms.Panel pMain;
-        private RJCodeUI_M1.RJControls.RJButton btnNotes;
         private RJCodeUI_M1.RJControls.RJMenuIcon btnMenu;
         private RJCodeUI_M1.RJControls.RJButton rjButton2;
         private RJCodeUI_M1.RJControls.RJButton rjButton1;
+        private FontAwesome.Sharp.IconButton btnNotes;
+        private FontAwesome.Sharp.IconButton btnHome;
+        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton iconButton2;
     }
 }

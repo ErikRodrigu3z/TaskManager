@@ -11,6 +11,7 @@ namespace TaskManager.Forms
     public partial class MainForm : Form
     {
         private readonly ICategoryRepo _catRepo;
+        private readonly Notes notes;
 
         public MainForm()
         {
@@ -24,6 +25,7 @@ namespace TaskManager.Forms
             #endregion
 
             _catRepo = new CategoryRepo();
+            notes = new Notes();
         }
 
         #region User control events
@@ -48,18 +50,16 @@ namespace TaskManager.Forms
         }
         #endregion
 
-        #region Menu buttons events
+        #region Menu buttons events       
+        private void btnNotes_Click(object sender, EventArgs e)
+        {             
+            FormHelper.OpenChildForm(notes, pMain);
+            FormHelper.SetActiveButtonMenu(btnNotes);
+        }
         private void btnHome_Click(object sender, EventArgs e)
         {
             FormHelper.SetActiveButtonMenu(btnHome);
             FormHelper.CloseAllForms(pMain);
-            
-        }
-        private void btnNotes_Click(object sender, EventArgs e)
-        {
-            Notes notes = new Notes();
-            FormHelper.OpenChildForm(notes, pMain);
-            FormHelper.SetActiveButtonMenu(btnNotes);
         }
         #endregion
 
@@ -106,12 +106,13 @@ namespace TaskManager.Forms
         }
 
 
+
+
         #region Methods
 
-        
+
 
         #endregion
-
 
     }
 }
