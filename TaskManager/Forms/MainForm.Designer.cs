@@ -30,17 +30,19 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.pMenu = new System.Windows.Forms.Panel();
+            this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.btnTareas = new FontAwesome.Sharp.IconButton();
+            this.btnUsers = new FontAwesome.Sharp.IconButton();
             this.btnHome = new FontAwesome.Sharp.IconButton();
             this.btnNotes = new FontAwesome.Sharp.IconButton();
             this.btnMenu = new RJCodeUI_M1.RJControls.RJMenuIcon();
             this.pRight = new System.Windows.Forms.Panel();
+            this.maxRestMinButtons1 = new TaskManager.UserControls.MaxRestMinButtons();
             this.pTop = new System.Windows.Forms.Panel();
             this.rjButton2 = new RJCodeUI_M1.RJControls.RJButton();
             this.rjButton1 = new RJCodeUI_M1.RJControls.RJButton();
             this.pMain = new System.Windows.Forms.Panel();
-            this.maxRestMinButtons1 = new TaskManager.UserControls.MaxRestMinButtons();
             this.pMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).BeginInit();
             this.pRight.SuspendLayout();
@@ -52,8 +54,10 @@
             this.pMenu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.pMenu.BackColor = System.Drawing.Color.Black;
+            this.pMenu.Controls.Add(this.iconButton3);
             this.pMenu.Controls.Add(this.iconButton1);
-            this.pMenu.Controls.Add(this.iconButton2);
+            this.pMenu.Controls.Add(this.btnTareas);
+            this.pMenu.Controls.Add(this.btnUsers);
             this.pMenu.Controls.Add(this.btnHome);
             this.pMenu.Controls.Add(this.btnNotes);
             this.pMenu.Controls.Add(this.btnMenu);
@@ -63,6 +67,28 @@
             this.pMenu.TabIndex = 3;
             this.pMenu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pMenu_MouseDown);
             // 
+            // iconButton3
+            // 
+            this.iconButton3.FlatAppearance.BorderSize = 0;
+            this.iconButton3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.iconButton3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton3.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton3.ForeColor = System.Drawing.Color.White;
+            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.BookDead;
+            this.iconButton3.IconColor = System.Drawing.Color.White;
+            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton3.IconSize = 35;
+            this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton3.Location = new System.Drawing.Point(8, 256);
+            this.iconButton3.Name = "iconButton3";
+            this.iconButton3.Size = new System.Drawing.Size(150, 36);
+            this.iconButton3.TabIndex = 49;
+            this.iconButton3.Text = "Notes";
+            this.iconButton3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton3.UseVisualStyleBackColor = true;
+            // 
             // iconButton1
             // 
             this.iconButton1.FlatAppearance.BorderSize = 0;
@@ -71,41 +97,64 @@
             this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButton1.ForeColor = System.Drawing.Color.White;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Home;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.BookDead;
             this.iconButton1.IconColor = System.Drawing.Color.White;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.IconSize = 35;
             this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(8, 133);
+            this.iconButton1.Location = new System.Drawing.Point(8, 214);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Size = new System.Drawing.Size(150, 36);
-            this.iconButton1.TabIndex = 47;
+            this.iconButton1.TabIndex = 48;
             this.iconButton1.Text = "Notes";
             this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton1.UseVisualStyleBackColor = true;
             // 
-            // iconButton2
+            // btnTareas
             // 
-            this.iconButton2.FlatAppearance.BorderSize = 0;
-            this.iconButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
-            this.iconButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton2.ForeColor = System.Drawing.Color.White;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.BookDead;
-            this.iconButton2.IconColor = System.Drawing.Color.White;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.IconSize = 35;
-            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.Location = new System.Drawing.Point(8, 172);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(150, 36);
-            this.iconButton2.TabIndex = 46;
-            this.iconButton2.Text = "Notes";
-            this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton2.UseVisualStyleBackColor = true;
+            this.btnTareas.FlatAppearance.BorderSize = 0;
+            this.btnTareas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.btnTareas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnTareas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTareas.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTareas.ForeColor = System.Drawing.Color.White;
+            this.btnTareas.IconChar = FontAwesome.Sharp.IconChar.Tasks;
+            this.btnTareas.IconColor = System.Drawing.Color.White;
+            this.btnTareas.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnTareas.IconSize = 35;
+            this.btnTareas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTareas.Location = new System.Drawing.Point(8, 133);
+            this.btnTareas.Name = "btnTareas";
+            this.btnTareas.Size = new System.Drawing.Size(150, 36);
+            this.btnTareas.TabIndex = 47;
+            this.btnTareas.Text = "Tasks";
+            this.btnTareas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTareas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTareas.UseVisualStyleBackColor = true;
+            this.btnTareas.Click += new System.EventHandler(this.btnTareas_Click);
+            // 
+            // btnUsers
+            // 
+            this.btnUsers.FlatAppearance.BorderSize = 0;
+            this.btnUsers.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.btnUsers.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUsers.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsers.ForeColor = System.Drawing.Color.White;
+            this.btnUsers.IconChar = FontAwesome.Sharp.IconChar.Users;
+            this.btnUsers.IconColor = System.Drawing.Color.White;
+            this.btnUsers.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnUsers.IconSize = 35;
+            this.btnUsers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUsers.Location = new System.Drawing.Point(8, 172);
+            this.btnUsers.Name = "btnUsers";
+            this.btnUsers.Size = new System.Drawing.Size(150, 36);
+            this.btnUsers.TabIndex = 46;
+            this.btnUsers.Text = "Users";
+            this.btnUsers.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnUsers.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnUsers.UseVisualStyleBackColor = true;
             // 
             // btnHome
             // 
@@ -181,6 +230,15 @@
             this.pRight.Size = new System.Drawing.Size(222, 625);
             this.pRight.TabIndex = 4;
             this.pRight.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pRight_MouseDown);
+            // 
+            // maxRestMinButtons1
+            // 
+            this.maxRestMinButtons1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.maxRestMinButtons1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.maxRestMinButtons1.Location = new System.Drawing.Point(130, -3);
+            this.maxRestMinButtons1.Name = "maxRestMinButtons1";
+            this.maxRestMinButtons1.Size = new System.Drawing.Size(94, 31);
+            this.maxRestMinButtons1.TabIndex = 2;
             // 
             // pTop
             // 
@@ -262,15 +320,6 @@
             this.pMain.TabIndex = 6;
             this.pMain.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pMain_MouseDown);
             // 
-            // maxRestMinButtons1
-            // 
-            this.maxRestMinButtons1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.maxRestMinButtons1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.maxRestMinButtons1.Location = new System.Drawing.Point(130, -3);
-            this.maxRestMinButtons1.Name = "maxRestMinButtons1";
-            this.maxRestMinButtons1.Size = new System.Drawing.Size(94, 31);
-            this.maxRestMinButtons1.TabIndex = 2;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -309,7 +358,9 @@
         private RJCodeUI_M1.RJControls.RJButton rjButton1;
         private FontAwesome.Sharp.IconButton btnNotes;
         private FontAwesome.Sharp.IconButton btnHome;
+        private FontAwesome.Sharp.IconButton btnTareas;
+        private FontAwesome.Sharp.IconButton btnUsers;
+        private FontAwesome.Sharp.IconButton iconButton3;
         private FontAwesome.Sharp.IconButton iconButton1;
-        private FontAwesome.Sharp.IconButton iconButton2;
     }
 }

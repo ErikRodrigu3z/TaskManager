@@ -297,12 +297,19 @@
     <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Modals\AddEditCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Modals\AddEditCategory.Designer.cs">
+      <DependentUpon>AddEditCategory.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Modals\MessageModal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Modals\MessageModal.Designer.cs">
       <DependentUpon>MessageModal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\Statics.cs" />
     <Compile Include="Helpers\MessageHelper.cs" />
     <Compile Include="UserControls\CustomToolTip.cs">
       <SubType>Component</SubType>
@@ -343,6 +350,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Modals\AddEditCategory.resx">
+      <DependentUpon>AddEditCategory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Modals\MessageModal.resx">
       <DependentUpon>MessageModal.cs</DependentUpon>

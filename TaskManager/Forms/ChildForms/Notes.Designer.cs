@@ -86,6 +86,7 @@ namespace TaskManager.Forms.ChildForms
             this.cmbCategories.Name = "cmbCategories";
             this.cmbCategories.Size = new System.Drawing.Size(240, 21);
             this.cmbCategories.TabIndex = 3;
+            this.cmbCategories.SelectedIndexChanged += new System.EventHandler(this.cmbCategories_SelectedIndexChanged);
             // 
             // lblCategory
             // 
@@ -227,7 +228,7 @@ namespace TaskManager.Forms.ChildForms
             this.lblIdCategory.Name = "lblIdCategory";
             this.lblIdCategory.Size = new System.Drawing.Size(16, 14);
             this.lblIdCategory.TabIndex = 12;
-            this.lblIdCategory.Text = "1";
+            this.lblIdCategory.Text = "0";
             // 
             // lblIdArticle
             // 
@@ -238,7 +239,7 @@ namespace TaskManager.Forms.ChildForms
             this.lblIdArticle.Name = "lblIdArticle";
             this.lblIdArticle.Size = new System.Drawing.Size(16, 14);
             this.lblIdArticle.TabIndex = 13;
-            this.lblIdArticle.Text = "1";
+            this.lblIdArticle.Text = "0";
             // 
             // btnEditCategory
             // 

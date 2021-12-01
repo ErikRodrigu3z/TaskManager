@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 using TaskManager.Forms.Modals;
 
 namespace TaskManager.Helpers
@@ -20,5 +21,32 @@ namespace TaskManager.Helpers
 
             return result;//Retornar Dialog Result  
         }
+
+        public static void ShowError(Exception exception)
+        {
+            string error = "";
+            if (exception.InnerException != null)
+            {
+                error = exception.Message;
+            }
+            else
+            {
+                error = exception.InnerException.Message;
+            }
+
+            using (var msgForm = new MessageModal(error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1))//Establecer otros valores predeterminados
+            {
+                msgForm.ShowDialog(); //Mostrar como formulario modal 
+            }
+        }
+
+        public static void ShowSuccess(string message = "") 
+        {
+            using (var msgForm = new MessageModal(message, "Success", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1))//Establecer otros valores predeterminados
+            {
+                msgForm.ShowDialog(); //Mostrar como formulario modal 
+            }
+        }
+
     }
 }

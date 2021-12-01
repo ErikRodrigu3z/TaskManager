@@ -13,10 +13,11 @@ namespace TaskManager.Forms
         private readonly ICategoryRepo _catRepo;
         private readonly Notes notes;
 
+        #region Constructor
         public MainForm()
         {
             InitializeComponent();
-            
+
             #region user control event handlers           
             maxRestMinButtons1.ButtonClose += new EventHandler(User_Control_Close);
             maxRestMinButtons1.ButtonMinimize += new EventHandler(User_Control_Minimize);
@@ -26,7 +27,8 @@ namespace TaskManager.Forms
 
             _catRepo = new CategoryRepo();
             notes = new Notes();
-        }
+        } 
+        #endregion
 
         #region User control events
         private void User_Control_Restore(object sender, EventArgs e)
@@ -61,6 +63,28 @@ namespace TaskManager.Forms
             FormHelper.SetActiveButtonMenu(btnHome);
             FormHelper.CloseAllChildForms(pMain);
         }
+        private void btnTareas_Click(object sender, EventArgs e)
+        {
+            MessageHelper.Show("mensaje", "Mensaje de prueba", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+        }
+        #endregion
+
+
+
+       
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+           
+        }
+
+
+
+
+
+        #region Methods
+
+
+
         #endregion
 
         #region Drag Form and drag objects "panels, etc"
@@ -97,23 +121,5 @@ namespace TaskManager.Forms
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
         #endregion
-
-
-       
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-           
-        }
-
-
-
-
-        #region Methods
-
-
-
-        #endregion
-
-        
     }
 }

@@ -33,7 +33,8 @@ namespace TaskManager.Helpers
             }
         }
         public static void ShowDialog(Form form) 
-        {  
+        {
+            form.FormBorderStyle = FormBorderStyle.None;
             form.ShowDialog();            
         }
         public static void OpenChildForm(Form form, Panel panel)
@@ -41,7 +42,7 @@ namespace TaskManager.Helpers
             form.TopLevel = false;
             form.FormBorderStyle = FormBorderStyle.None;
             form.Dock = DockStyle.Fill;
-            // 
+            // Add form to panel
             panel.Controls.Add(form);
             panel.AutoScrollMinSize = form.Size;
 
