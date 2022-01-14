@@ -65,7 +65,7 @@ namespace TaskManager.Forms
         }
         private void btnTareas_Click(object sender, EventArgs e)
         {
-            MessageHelper.Show("mensaje", "Mensaje de prueba", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            //MessageHelper.Show("mensaje", "Mensaje de prueba", MessageBoxButtons.OK, MessageBoxIcon.Stop);
         }
         #endregion
 

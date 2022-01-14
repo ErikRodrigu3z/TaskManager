@@ -151,7 +151,7 @@ namespace TaskManager.Forms.ChildForms
         {
             if (string.IsNullOrEmpty(txtArticle.Text) || string.IsNullOrEmpty(txtTitle.Text))
             {
-                MessageHelper.Show("Debe llenar ambos campos", "Articulo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageHelper.Show("You must fill both fields", "Article", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return Result.fail;
             }
             return Result.success;
@@ -184,7 +184,7 @@ namespace TaskManager.Forms.ChildForms
             toolTip.SetToolTip(this.btnCopy, "Copy Content \n ");
             toolTip.SetToolTip(this.btnAddArticle, "Add new article \n ");
             toolTip.SetToolTip(this.btnEditArticle, "Edit Article \n ");
-            toolTip.SetToolTip(this.btnClearArticle, "Clear Article \n ");
+            toolTip.SetToolTip(this.btnClearArticle, "Clear for add a new article \n ");
         }
         #endregion
 

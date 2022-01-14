@@ -72,7 +72,7 @@ namespace TaskManager.Forms.Modals
                 if (string.IsNullOrEmpty(txtCategory.Text))
                 {
                     lblMessage.Visible = true;
-                    lblMessage.Text = "La categoría es obligatoria";
+                    lblMessage.Text = "Category is required";
                 }
                 else
                 {
@@ -84,7 +84,8 @@ namespace TaskManager.Forms.Modals
                             Name = txtCategory.Text
                         };
                         _catRepo.Create(category);
-                        txtCategory.ResetText();
+                        txtCategory.Text = "";
+                        this.Hide();
                     }
                     else // Edit category
                     {                                       

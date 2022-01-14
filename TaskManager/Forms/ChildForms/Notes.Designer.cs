@@ -74,7 +74,7 @@ namespace TaskManager.Forms.ChildForms
             this.gvArticles.ColumnHeadersHeight = 30;
             this.gvArticles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.gvArticles.EnableHeadersVisualStyles = false;
-            this.gvArticles.Location = new System.Drawing.Point(12, 76);
+            this.gvArticles.Location = new System.Drawing.Point(12, 95);
             this.gvArticles.Name = "gvArticles";
             this.gvArticles.ReadOnly = true;
             this.gvArticles.RowHeadersVisible = false;
@@ -83,7 +83,7 @@ namespace TaskManager.Forms.ChildForms
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Green;
             this.gvArticles.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.gvArticles.Size = new System.Drawing.Size(240, 445);
+            this.gvArticles.Size = new System.Drawing.Size(240, 426);
             this.gvArticles.TabIndex = 0;
             this.gvArticles.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvArticles_CellClick);
             // 

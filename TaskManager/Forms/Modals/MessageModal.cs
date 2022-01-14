@@ -149,7 +149,7 @@ namespace TaskManager.Forms.Modals
             btnOk.Location = new Point(locationX, locationY);
             btnOk.Name = "btnOk";
             btnOk.Size = new Size(110, 35);
-            btnOk.Text = "Aceptar";
+            btnOk.Text = "Accept";
             btnOk.UseVisualStyleBackColor = false;
 
             btnOk.DialogResult = DialogResult.OK;//Establecer DialogResult
@@ -173,7 +173,7 @@ namespace TaskManager.Forms.Modals
             btnCancel.Location = new Point(locationX, locationY);
             btnCancel.Name = "btnCancel";
             btnCancel.Size = new Size(110, 35);
-            btnCancel.Text = "Cancelar";
+            btnCancel.Text = "Cancel";
             btnCancel.UseVisualStyleBackColor = false;
 
             btnCancel.DialogResult = DialogResult.Cancel;//Establecer DialogResult
@@ -196,7 +196,7 @@ namespace TaskManager.Forms.Modals
             btnYes.Location = new Point(locationX, locationY);
             btnYes.Name = "btnYes";
             btnYes.Size = new Size(110, 35);
-            btnYes.Text = "Sí";
+            btnYes.Text = "Yes";
             btnYes.UseVisualStyleBackColor = false;
 
             btnYes.DialogResult = DialogResult.Yes;//Establecer DialogResult
@@ -242,7 +242,7 @@ namespace TaskManager.Forms.Modals
             btnRetry.Location = new Point(locationX, locationY);
             btnRetry.Name = "btnRetry";
             btnRetry.Size = new Size(110, 35);
-            btnRetry.Text = "Reintentar";
+            btnRetry.Text = "Retry";
             btnRetry.UseVisualStyleBackColor = false;
 
             btnRetry.DialogResult = DialogResult.Retry;//Establecer DialogResult
@@ -264,7 +264,7 @@ namespace TaskManager.Forms.Modals
             btnAbort.Location = new Point(locationX, locationY);
             btnAbort.Name = "btnAbort";
             btnAbort.Size = new Size(110, 35);
-            btnAbort.Text = "Abortar";
+            btnAbort.Text = "Abort";
             btnAbort.UseVisualStyleBackColor = false;
 
             btnAbort.DialogResult = DialogResult.Abort;//Establecer DialogResult
@@ -287,7 +287,7 @@ namespace TaskManager.Forms.Modals
             btnIgnore.Location = new Point(locationX, locationY);
             btnIgnore.Name = "btnIgnore";
             btnIgnore.Size = new Size(110, 35);
-            btnIgnore.Text = "Ignorar";
+            btnIgnore.Text = "Ignore";
             btnIgnore.UseVisualStyleBackColor = false;
 
             btnIgnore.DialogResult = DialogResult.Ignore;//Establecer DialogResult
