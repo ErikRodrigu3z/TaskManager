@@ -29,10 +29,12 @@ namespace TaskManager.Forms.ChildForms
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Notes));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.gvArticles = new System.Windows.Forms.DataGridView();
+            this.txtTitle = new System.Windows.Forms.TextBox();
+            this.txtArticle = new System.Windows.Forms.TextBox();
             this.cmbCategories = new System.Windows.Forms.ComboBox();
             this.lblCategory = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -45,39 +47,66 @@ namespace TaskManager.Forms.ChildForms
             this.lblIdCategory = new System.Windows.Forms.Label();
             this.lblIdArticle = new System.Windows.Forms.Label();
             this.btnEditCategory = new FontAwesome.Sharp.IconButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvArticles)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // gvArticles
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.gvArticles.AllowUserToAddRows = false;
+            this.gvArticles.AllowUserToDeleteRows = false;
+            this.gvArticles.AllowUserToResizeColumns = false;
+            this.gvArticles.AllowUserToResizeRows = false;
+            this.gvArticles.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 76);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(240, 445);
-            this.dataGridView1.TabIndex = 0;
+            this.gvArticles.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.gvArticles.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.gvArticles.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gvArticles.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.gvArticles.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gvArticles.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.gvArticles.ColumnHeadersHeight = 30;
+            this.gvArticles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.gvArticles.EnableHeadersVisualStyles = false;
+            this.gvArticles.Location = new System.Drawing.Point(12, 76);
+            this.gvArticles.Name = "gvArticles";
+            this.gvArticles.ReadOnly = true;
+            this.gvArticles.RowHeadersVisible = false;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Green;
+            this.gvArticles.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.gvArticles.Size = new System.Drawing.Size(240, 445);
+            this.gvArticles.TabIndex = 0;
+            this.gvArticles.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvArticles_CellClick);
             // 
-            // textBox1
+            // txtTitle
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(258, 48);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(516, 20);
-            this.textBox1.TabIndex = 1;
+            this.txtTitle.Location = new System.Drawing.Point(258, 48);
+            this.txtTitle.Name = "txtTitle";
+            this.txtTitle.Size = new System.Drawing.Size(516, 20);
+            this.txtTitle.TabIndex = 1;
             // 
-            // textBox2
+            // txtArticle
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtArticle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Location = new System.Drawing.Point(258, 95);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBox2.Size = new System.Drawing.Size(516, 426);
-            this.textBox2.TabIndex = 2;
+            this.txtArticle.Location = new System.Drawing.Point(258, 95);
+            this.txtArticle.Multiline = true;
+            this.txtArticle.Name = "txtArticle";
+            this.txtArticle.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtArticle.Size = new System.Drawing.Size(516, 426);
+            this.txtArticle.TabIndex = 2;
             // 
             // cmbCategories
             // 
@@ -158,6 +187,7 @@ namespace TaskManager.Forms.ChildForms
             this.btnAddArticle.Size = new System.Drawing.Size(41, 34);
             this.btnAddArticle.TabIndex = 8;
             this.btnAddArticle.UseVisualStyleBackColor = false;
+            this.btnAddArticle.Click += new System.EventHandler(this.btnAddArticle_Click);
             // 
             // btnEditArticle
             // 
@@ -278,16 +308,16 @@ namespace TaskManager.Forms.ChildForms
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblCategory);
             this.Controls.Add(this.cmbCategories);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.txtArticle);
+            this.Controls.Add(this.txtTitle);
+            this.Controls.Add(this.gvArticles);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Notes";
             this.Text = "Notes";
             this.Load += new System.EventHandler(this.Notes_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Notes_KeyDown);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvArticles)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -295,9 +325,9 @@ namespace TaskManager.Forms.ChildForms
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.DataGridView gvArticles;
+        private System.Windows.Forms.TextBox txtTitle;
+        private System.Windows.Forms.TextBox txtArticle;
         private System.Windows.Forms.ComboBox cmbCategories;
         private System.Windows.Forms.Label lblCategory;
         private System.Windows.Forms.Label label1;

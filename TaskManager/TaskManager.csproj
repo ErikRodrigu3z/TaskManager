@@ -309,6 +309,7 @@
     <Compile Include="Forms\Modals\MessageModal.Designer.cs">
       <DependentUpon>MessageModal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\Enums.cs" />
     <Compile Include="Helpers\Statics.cs" />
     <Compile Include="Helpers\MessageHelper.cs" />
     <Compile Include="UserControls\CustomToolTip.cs">

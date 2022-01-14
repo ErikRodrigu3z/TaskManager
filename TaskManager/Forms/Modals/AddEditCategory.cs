@@ -26,6 +26,8 @@ namespace TaskManager.Forms.Modals
             category = new Category();
         }
         #endregion
+
+        #region Form events
         private void AddEditCategory_Load(object sender, EventArgs e)
         {
             if (Statics.AddCategory)
@@ -38,7 +40,8 @@ namespace TaskManager.Forms.Modals
                 txtCategory.Text = category.Name;
             }
             lblMessage.Visible = false;
-        }
+        } 
+        #endregion
 
         #region controls events
 
@@ -61,7 +64,6 @@ namespace TaskManager.Forms.Modals
         } 
         #endregion
 
-
         #region Methods
         public void AddEdit()
         {
@@ -74,6 +76,7 @@ namespace TaskManager.Forms.Modals
                 }
                 else
                 {
+                    //Add new category
                     if (Statics.AddCategory)
                     {                        
                         Category category = new Category
@@ -83,8 +86,8 @@ namespace TaskManager.Forms.Modals
                         _catRepo.Create(category);
                         txtCategory.ResetText();
                     }
-                    else
-                    {
+                    else // Edit category
+                    {                                       
                         category.Name = txtCategory.Text;
                         _catRepo.Update(category);
                         txtCategory.ResetText();

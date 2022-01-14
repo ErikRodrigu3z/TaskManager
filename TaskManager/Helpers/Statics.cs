@@ -11,11 +11,11 @@ namespace TaskManager.Helpers
         #region form fields
         public static bool AddCategory { get; set; }
         public static int IdCategory { get; set; } = 0;
-        public static int IdArticle { get; set; } = 0;  
+        public static int IdArticle { get; set; } = 0;
         #endregion
 
 
 
-
+       
     }
 }

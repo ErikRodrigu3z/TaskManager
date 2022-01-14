@@ -88,6 +88,7 @@
             this.iconButton3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton3.UseVisualStyleBackColor = true;
+            this.iconButton3.Visible = false;
             // 
             // iconButton1
             // 
@@ -110,6 +111,7 @@
             this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton1.UseVisualStyleBackColor = true;
+            this.iconButton1.Visible = false;
             // 
             // btnTareas
             // 
@@ -132,6 +134,7 @@
             this.btnTareas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTareas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTareas.UseVisualStyleBackColor = true;
+            this.btnTareas.Visible = false;
             this.btnTareas.Click += new System.EventHandler(this.btnTareas_Click);
             // 
             // btnUsers
@@ -155,6 +158,7 @@
             this.btnUsers.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnUsers.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnUsers.UseVisualStyleBackColor = true;
+            this.btnUsers.Visible = false;
             // 
             // btnHome
             // 
