@@ -393,6 +393,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
+    <Content Include="Helpers\RJCodeUI_M1.dll" />
     <Content Include="Resources\CloseDark.png" />
     <Content Include="Resources\CloseWhite.png" />
     <None Include="Resources\kybalionsoft.png" />
