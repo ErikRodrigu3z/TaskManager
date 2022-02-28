@@ -92,6 +92,7 @@ namespace TaskManager.Forms.Modals
                         category.Name = txtCategory.Text;
                         _catRepo.Update(category);
                         txtCategory.ResetText();
+                        this.Hide();
                     }
                     //refresh combo box category
                     this.RefreshCmb();

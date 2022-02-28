@@ -398,10 +398,12 @@
     <Content Include="Resources\CloseWhite.png" />
     <None Include="Resources\kybalionsoft.png" />
     <None Include="Resources\favicon.ico" />
+    <Content Include="Resources\green-eye.png" />
     <Content Include="Resources\MaximizeDark.png" />
     <Content Include="Resources\MaximizeWhite.png" />
     <Content Include="Resources\MinimizeDark.png" />
     <Content Include="Resources\MinimizeWhite.png" />
+    <Content Include="Resources\red-eye.png" />
     <Content Include="Resources\RestoreDark.png" />
     <Content Include="Resources\RestoreWhite.png" />
     <Content Include="Set de Halloween - Génesis Toxical %288%29.ico" />

@@ -103,6 +103,16 @@ namespace TaskManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap green_eye {
+            get {
+                object obj = ResourceManager.GetObject("green-eye", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap kybalionsoft {
             get {
                 object obj = ResourceManager.GetObject("kybalionsoft", resourceCulture);
