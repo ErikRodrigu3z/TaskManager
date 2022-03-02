@@ -33,13 +33,13 @@ namespace TaskManager.Forms.ChildForms
         {
             // Set up the ToolTip text for the Button and Checkbox.             
             SetToolTips();
-            lblIdCategory.Text = cmbCategories.SelectedValue.ToString();
+            lblIdCategory.Text = cmbCategories.SelectedValue == null ? "" : cmbCategories.SelectedValue.ToString();
 
             #region event handler -> AddCategory, EditCategory forms
             addEditModal.RefreshCmb += new AddEditCategory.RefreshCmbCategory(FillCmbCategory);
             #endregion
 
-            FillGridArticleByIdCat(Convert.ToInt32(lblIdCategory.Text));
+            FillGridArticleByIdCat(Convert.ToInt32(lblIdCategory.Text == "" ? "0" : lblIdCategory.Text));
             
         }
 
