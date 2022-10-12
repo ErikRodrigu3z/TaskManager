@@ -280,6 +280,7 @@
     <Compile Include="ApplicationDbContext.cs" />
     <Compile Include="ApplicationDbInitializer.cs" />
     <Compile Include="ApplicationModelConfiguration.cs" />
+    <Compile Include="Enums\TranssactionStatus.cs" />
     <Compile Include="Forms\ChildForms\Notes.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -45,8 +45,8 @@
             this.biFacebook = new RJCodeUI_M1.RJControls.RJMenuIcon();
             this.txtEmail = new RJCodeUI_M1.RJControls.RJTextBox();
             this.txtPassword = new RJCodeUI_M1.RJControls.RJTextBox();
-            this.minCloseButtons = new TaskManager.UserControls.MinCloseButtons();
             this.lblLogin = new System.Windows.Forms.Label();
+            this.minCloseButtons = new TaskManager.UserControls.MinCloseButtons();
             this.pLogin.SuspendLayout();
             this.rjImageColorOverlay2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
@@ -64,8 +64,9 @@
             this.pLogin.Controls.Add(this.rjImageColorOverlay2);
             this.pLogin.Dock = System.Windows.Forms.DockStyle.Left;
             this.pLogin.Location = new System.Drawing.Point(0, 0);
+            this.pLogin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pLogin.Name = "pLogin";
-            this.pLogin.Size = new System.Drawing.Size(320, 246);
+            this.pLogin.Size = new System.Drawing.Size(480, 378);
             this.pLogin.TabIndex = 0;
             // 
             // rjImageColorOverlay2
@@ -83,10 +84,11 @@
             this.rjImageColorOverlay2.Image = ((System.Drawing.Image)(resources.GetObject("rjImageColorOverlay2.Image")));
             this.rjImageColorOverlay2.ImageMode = System.Windows.Forms.ImageLayout.Stretch;
             this.rjImageColorOverlay2.Location = new System.Drawing.Point(0, 0);
+            this.rjImageColorOverlay2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.rjImageColorOverlay2.Name = "rjImageColorOverlay2";
             this.rjImageColorOverlay2.Opacity = 80;
             this.rjImageColorOverlay2.OverlayColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjImageColorOverlay2.Size = new System.Drawing.Size(320, 246);
+            this.rjImageColorOverlay2.Size = new System.Drawing.Size(480, 378);
             this.rjImageColorOverlay2.TabIndex = 37;
             this.rjImageColorOverlay2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.rjImageColorOverlay2_MouseDown);
             // 
@@ -96,10 +98,9 @@
             this.lblDescription.BackColor = System.Drawing.Color.Transparent;
             this.lblDescription.Font = new System.Drawing.Font("Verdana", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescription.ForeColor = System.Drawing.Color.Silver;
-            this.lblDescription.Location = new System.Drawing.Point(23, 205);
-            this.lblDescription.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDescription.Location = new System.Drawing.Point(34, 315);
             this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(264, 32);
+            this.lblDescription.Size = new System.Drawing.Size(381, 46);
             this.lblDescription.TabIndex = 4;
             this.lblDescription.Text = ".Net, .Net Core developing\r\ntrue passion for software development";
             this.lblDescription.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -110,10 +111,9 @@
             this.lblTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblTitle.Font = new System.Drawing.Font("Verdana", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.Silver;
-            this.lblTitle.Location = new System.Drawing.Point(10, 11);
-            this.lblTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTitle.Location = new System.Drawing.Point(15, 17);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(255, 25);
+            this.lblTitle.Size = new System.Drawing.Size(381, 36);
             this.lblTitle.TabIndex = 5;
             this.lblTitle.Text = "Portable Win Forms App";
             // 
@@ -123,9 +123,10 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Silver;
-            this.label2.Location = new System.Drawing.Point(134, 44);
+            this.label2.Location = new System.Drawing.Point(201, 68);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(182, 17);
+            this.label2.Size = new System.Drawing.Size(251, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "Repository pattern, SQLITE";
             // 
@@ -135,8 +136,9 @@
             this.picLogo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.picLogo.Image = global::TaskManager.Properties.Resources.kybalionsoft;
             this.picLogo.Location = new System.Drawing.Point(0, 0);
+            this.picLogo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(320, 246);
+            this.picLogo.Size = new System.Drawing.Size(480, 378);
             this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picLogo.TabIndex = 45;
             this.picLogo.TabStop = false;
@@ -147,9 +149,10 @@
             this.lblMessage.AutoSize = true;
             this.lblMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMessage.ForeColor = System.Drawing.Color.IndianRed;
-            this.lblMessage.Location = new System.Drawing.Point(364, 136);
+            this.lblMessage.Location = new System.Drawing.Point(546, 209);
+            this.lblMessage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(72, 16);
+            this.lblMessage.Size = new System.Drawing.Size(100, 25);
             this.lblMessage.TabIndex = 10;
             this.lblMessage.Text = "Message";
             this.lblMessage.Visible = false;
@@ -161,10 +164,11 @@
             this.icoPassword.IconChar = FontAwesome.Sharp.IconChar.Key;
             this.icoPassword.IconColor = System.Drawing.Color.Gray;
             this.icoPassword.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.icoPassword.IconSize = 38;
-            this.icoPassword.Location = new System.Drawing.Point(323, 91);
+            this.icoPassword.IconSize = 58;
+            this.icoPassword.Location = new System.Drawing.Point(484, 140);
+            this.icoPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.icoPassword.Name = "icoPassword";
-            this.icoPassword.Size = new System.Drawing.Size(43, 38);
+            this.icoPassword.Size = new System.Drawing.Size(64, 58);
             this.icoPassword.TabIndex = 14;
             this.icoPassword.TabStop = false;
             // 
@@ -175,10 +179,11 @@
             this.icoUser.IconChar = FontAwesome.Sharp.IconChar.UserAlt;
             this.icoUser.IconColor = System.Drawing.Color.Gray;
             this.icoUser.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.icoUser.IconSize = 39;
-            this.icoUser.Location = new System.Drawing.Point(322, 38);
+            this.icoUser.IconSize = 60;
+            this.icoUser.Location = new System.Drawing.Point(483, 58);
+            this.icoUser.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.icoUser.Name = "icoUser";
-            this.icoUser.Size = new System.Drawing.Size(43, 39);
+            this.icoUser.Size = new System.Drawing.Size(64, 60);
             this.icoUser.TabIndex = 13;
             this.icoUser.TabStop = false;
             // 
@@ -200,9 +205,10 @@
             this.btnLogin.IconColor = System.Drawing.Color.Green;
             this.btnLogin.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnLogin.IconSize = 24;
-            this.btnLogin.Location = new System.Drawing.Point(363, 160);
+            this.btnLogin.Location = new System.Drawing.Point(544, 246);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(256, 40);
+            this.btnLogin.Size = new System.Drawing.Size(384, 62);
             this.btnLogin.Style = RJCodeUI_M1.RJControls.ControlStyle.Glass;
             this.btnLogin.TabIndex = 2;
             this.btnLogin.Text = "Login";
@@ -223,7 +229,8 @@
             this.biYoutube.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(129)))), ((int)(((byte)(132)))));
             this.biYoutube.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.biYoutube.IconSize = 25;
-            this.biYoutube.Location = new System.Drawing.Point(512, 221);
+            this.biYoutube.Location = new System.Drawing.Point(768, 340);
+            this.biYoutube.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.biYoutube.Name = "biYoutube";
             this.biYoutube.Size = new System.Drawing.Size(25, 25);
             this.biYoutube.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -243,7 +250,8 @@
             this.biWebPage.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(129)))), ((int)(((byte)(132)))));
             this.biWebPage.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.biWebPage.IconSize = 25;
-            this.biWebPage.Location = new System.Drawing.Point(543, 221);
+            this.biWebPage.Location = new System.Drawing.Point(814, 340);
+            this.biWebPage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.biWebPage.Name = "biWebPage";
             this.biWebPage.Size = new System.Drawing.Size(25, 25);
             this.biWebPage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -263,7 +271,8 @@
             this.biGitHub.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(129)))), ((int)(((byte)(132)))));
             this.biGitHub.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.biGitHub.IconSize = 25;
-            this.biGitHub.Location = new System.Drawing.Point(574, 221);
+            this.biGitHub.Location = new System.Drawing.Point(861, 340);
+            this.biGitHub.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.biGitHub.Name = "biGitHub";
             this.biGitHub.Size = new System.Drawing.Size(25, 25);
             this.biGitHub.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -283,7 +292,8 @@
             this.biFacebook.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(129)))), ((int)(((byte)(132)))));
             this.biFacebook.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.biFacebook.IconSize = 25;
-            this.biFacebook.Location = new System.Drawing.Point(605, 221);
+            this.biFacebook.Location = new System.Drawing.Point(908, 340);
+            this.biFacebook.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.biFacebook.Name = "biFacebook";
             this.biFacebook.Size = new System.Drawing.Size(25, 25);
             this.biFacebook.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -303,7 +313,8 @@
             this.txtEmail.BorderSize = 3;
             this.txtEmail.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(129)))), ((int)(((byte)(132)))));
-            this.txtEmail.Location = new System.Drawing.Point(363, 34);
+            this.txtEmail.Location = new System.Drawing.Point(544, 52);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtEmail.MultiLine = false;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
@@ -311,7 +322,7 @@
             this.txtEmail.PlaceHolderColor = System.Drawing.Color.Gray;
             this.txtEmail.PlaceHolderText = "User";
             this.txtEmail.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtEmail.Size = new System.Drawing.Size(256, 34);
+            this.txtEmail.Size = new System.Drawing.Size(384, 44);
             this.txtEmail.Style = RJCodeUI_M1.RJControls.TextBoxStyle.FlaringLine;
             this.txtEmail.TabIndex = 0;
             // 
@@ -326,7 +337,8 @@
             this.txtPassword.BorderSize = 3;
             this.txtPassword.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.ForeColor = System.Drawing.Color.Gray;
-            this.txtPassword.Location = new System.Drawing.Point(363, 92);
+            this.txtPassword.Location = new System.Drawing.Point(544, 142);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPassword.MaxLength = 100;
             this.txtPassword.MultiLine = false;
             this.txtPassword.Name = "txtPassword";
@@ -335,18 +347,10 @@
             this.txtPassword.PlaceHolderColor = System.Drawing.Color.Gray;
             this.txtPassword.PlaceHolderText = "Password";
             this.txtPassword.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtPassword.Size = new System.Drawing.Size(256, 34);
+            this.txtPassword.Size = new System.Drawing.Size(384, 44);
             this.txtPassword.Style = RJCodeUI_M1.RJControls.TextBoxStyle.MatteLine;
             this.txtPassword.TabIndex = 43;
             this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
-            // 
-            // minCloseButtons
-            // 
-            this.minCloseButtons.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.minCloseButtons.Location = new System.Drawing.Point(575, -1);
-            this.minCloseButtons.Name = "minCloseButtons";
-            this.minCloseButtons.Size = new System.Drawing.Size(56, 25);
-            this.minCloseButtons.TabIndex = 44;
             // 
             // lblLogin
             // 
@@ -354,20 +358,28 @@
             this.lblLogin.BackColor = System.Drawing.Color.Transparent;
             this.lblLogin.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLogin.ForeColor = System.Drawing.Color.DarkGray;
-            this.lblLogin.Location = new System.Drawing.Point(432, -4);
-            this.lblLogin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblLogin.Location = new System.Drawing.Point(648, -6);
             this.lblLogin.Name = "lblLogin";
-            this.lblLogin.Size = new System.Drawing.Size(98, 32);
+            this.lblLogin.Size = new System.Drawing.Size(148, 49);
             this.lblLogin.TabIndex = 18;
             this.lblLogin.Text = "Login";
             this.lblLogin.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lblLogin_MouseDown);
             // 
+            // minCloseButtons
+            // 
+            this.minCloseButtons.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.minCloseButtons.Location = new System.Drawing.Point(858, -2);
+            this.minCloseButtons.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.minCloseButtons.Name = "minCloseButtons";
+            this.minCloseButtons.Size = new System.Drawing.Size(88, 38);
+            this.minCloseButtons.TabIndex = 44;
+            // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(631, 246);
+            this.ClientSize = new System.Drawing.Size(946, 378);
             this.Controls.Add(this.minCloseButtons);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtEmail);
@@ -384,6 +396,7 @@
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";

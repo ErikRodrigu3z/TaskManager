@@ -1,8 +1,13 @@
 ﻿using System;
+using System.Drawing;
+using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
+using TaskManager.Enums;
 using TaskManager.Forms.Modals;
 using TaskManager.Helpers;
 using TaskManager.Models;
+using TaskManager.Properties;
 using TaskManager.Repository.ArticleRepo;
 using TaskManager.Repository.CategoryRepo;
 using TaskManager.UserControls;
@@ -25,7 +30,7 @@ namespace TaskManager.Forms.ChildForms
             _Article = new ArticleRepo();
             toolTip = new CustomToolTip();
             addEditModal = new AddEditCategory();
-            FillCmbCategory();
+            FillCmbCategory();            
         }
 
         #region Form events
@@ -86,6 +91,10 @@ namespace TaskManager.Forms.ChildForms
         }
         private void btnEditArticle_Click(object sender, EventArgs e)
         {
+            this.StatusSuccessPic.Visible = false;
+            this.StatusErrorPic.Visible = true;
+            //SetTransStatus(TranssactionStatus.Success);
+            //TODO: aplicar el icono de estatus mientras esta la transacción
             var res = ValidateArticle();
             if (res == Result.success)
             {
@@ -93,7 +102,8 @@ namespace TaskManager.Forms.ChildForms
                 article.Title = txtTitle.Text;
                 article.Content = txtArticle.Text;
                 _Article.Update(article);
-                FillGridArticleByIdCat(Convert.ToInt32(lblIdCategory.Text));                
+                FillGridArticleByIdCat(Convert.ToInt32(lblIdCategory.Text));
+
             }
         }
         private void btnCopy_Click(object sender, EventArgs e)
@@ -186,7 +196,34 @@ namespace TaskManager.Forms.ChildForms
             toolTip.SetToolTip(this.btnEditArticle, "Edit Article \n ");
             toolTip.SetToolTip(this.btnClearArticle, "Clear for add a new article \n ");
         }
+        public void SetTransStatus(TranssactionStatus status)
+        {
+            switch (status)
+            {
+                case TranssactionStatus.Success:                    
+                    StatusSuccessPic.Visible = true;
+                    //Thread.Sleep(3000);
+                    StatusSuccessPic.Visible = false;
+                    break;
+                case TranssactionStatus.Error:
+                   
+                    StatusErrorPic.Visible = true;
+                    Thread.Sleep(3000);
+                    StatusErrorPic.Visible = false;
+                    break;
+                default:
+                    break;
+            }
+        }
         #endregion
 
+        private void cmbFontSize_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtArticle.Font = new Font("Microsoft Sans Serif", int.Parse(cmbFontSize.Text), FontStyle.Bold);
+            //txtArticle.ForeColor = Color.Red;
+
+
+
+        }
     }
 }

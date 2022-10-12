@@ -163,6 +163,16 @@ namespace TaskManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap red_eye {
+            get {
+                object obj = ResourceManager.GetObject("red_eye", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap RestoreDark {
             get {
                 object obj = ResourceManager.GetObject("RestoreDark", resourceCulture);

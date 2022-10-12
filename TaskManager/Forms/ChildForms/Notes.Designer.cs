@@ -47,7 +47,12 @@ namespace TaskManager.Forms.ChildForms
             this.lblIdCategory = new System.Windows.Forms.Label();
             this.lblIdArticle = new System.Windows.Forms.Label();
             this.btnEditCategory = new FontAwesome.Sharp.IconButton();
+            this.cmbFontSize = new System.Windows.Forms.ComboBox();
+            this.StatusSuccessPic = new System.Windows.Forms.PictureBox();
+            this.StatusErrorPic = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.gvArticles)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StatusSuccessPic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StatusErrorPic)).BeginInit();
             this.SuspendLayout();
             // 
             // gvArticles
@@ -74,16 +79,18 @@ namespace TaskManager.Forms.ChildForms
             this.gvArticles.ColumnHeadersHeight = 30;
             this.gvArticles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.gvArticles.EnableHeadersVisualStyles = false;
-            this.gvArticles.Location = new System.Drawing.Point(12, 95);
+            this.gvArticles.Location = new System.Drawing.Point(18, 146);
+            this.gvArticles.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gvArticles.Name = "gvArticles";
             this.gvArticles.ReadOnly = true;
             this.gvArticles.RowHeadersVisible = false;
+            this.gvArticles.RowHeadersWidth = 62;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Green;
             this.gvArticles.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.gvArticles.Size = new System.Drawing.Size(240, 426);
+            this.gvArticles.Size = new System.Drawing.Size(360, 655);
             this.gvArticles.TabIndex = 0;
             this.gvArticles.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvArticles_CellClick);
             // 
@@ -91,9 +98,10 @@ namespace TaskManager.Forms.ChildForms
             // 
             this.txtTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTitle.Location = new System.Drawing.Point(258, 48);
+            this.txtTitle.Location = new System.Drawing.Point(387, 74);
+            this.txtTitle.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtTitle.Name = "txtTitle";
-            this.txtTitle.Size = new System.Drawing.Size(516, 20);
+            this.txtTitle.Size = new System.Drawing.Size(772, 26);
             this.txtTitle.TabIndex = 1;
             // 
             // txtArticle
@@ -101,19 +109,21 @@ namespace TaskManager.Forms.ChildForms
             this.txtArticle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtArticle.Location = new System.Drawing.Point(258, 95);
+            this.txtArticle.Location = new System.Drawing.Point(387, 146);
+            this.txtArticle.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtArticle.Multiline = true;
             this.txtArticle.Name = "txtArticle";
             this.txtArticle.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtArticle.Size = new System.Drawing.Size(516, 426);
+            this.txtArticle.Size = new System.Drawing.Size(772, 653);
             this.txtArticle.TabIndex = 2;
             // 
             // cmbCategories
             // 
             this.cmbCategories.FormattingEnabled = true;
-            this.cmbCategories.Location = new System.Drawing.Point(12, 49);
+            this.cmbCategories.Location = new System.Drawing.Point(18, 75);
+            this.cmbCategories.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbCategories.Name = "cmbCategories";
-            this.cmbCategories.Size = new System.Drawing.Size(240, 21);
+            this.cmbCategories.Size = new System.Drawing.Size(358, 28);
             this.cmbCategories.TabIndex = 3;
             this.cmbCategories.SelectedIndexChanged += new System.EventHandler(this.cmbCategories_SelectedIndexChanged);
             // 
@@ -122,9 +132,10 @@ namespace TaskManager.Forms.ChildForms
             this.lblCategory.AutoSize = true;
             this.lblCategory.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCategory.ForeColor = System.Drawing.Color.White;
-            this.lblCategory.Location = new System.Drawing.Point(12, 28);
+            this.lblCategory.Location = new System.Drawing.Point(18, 43);
+            this.lblCategory.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCategory.Name = "lblCategory";
-            this.lblCategory.Size = new System.Drawing.Size(89, 18);
+            this.lblCategory.Size = new System.Drawing.Size(134, 29);
             this.lblCategory.TabIndex = 4;
             this.lblCategory.Text = "Category";
             // 
@@ -133,9 +144,10 @@ namespace TaskManager.Forms.ChildForms
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(258, 74);
+            this.label1.Location = new System.Drawing.Point(387, 114);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 18);
+            this.label1.Size = new System.Drawing.Size(101, 29);
             this.label1.TabIndex = 5;
             this.label1.Text = "Article";
             // 
@@ -144,9 +156,10 @@ namespace TaskManager.Forms.ChildForms
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(255, 28);
+            this.label2.Location = new System.Drawing.Point(382, 43);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 18);
+            this.label2.Size = new System.Drawing.Size(72, 29);
             this.label2.TabIndex = 6;
             this.label2.Text = "Title";
             // 
@@ -162,9 +175,10 @@ namespace TaskManager.Forms.ChildForms
             this.btnAddCategory.IconColor = System.Drawing.Color.White;
             this.btnAddCategory.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAddCategory.IconSize = 30;
-            this.btnAddCategory.Location = new System.Drawing.Point(211, 12);
+            this.btnAddCategory.Location = new System.Drawing.Point(316, 18);
+            this.btnAddCategory.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAddCategory.Name = "btnAddCategory";
-            this.btnAddCategory.Size = new System.Drawing.Size(41, 34);
+            this.btnAddCategory.Size = new System.Drawing.Size(62, 52);
             this.btnAddCategory.TabIndex = 7;
             this.btnAddCategory.UseVisualStyleBackColor = false;
             this.btnAddCategory.Click += new System.EventHandler(this.btnAddCategory_Click);
@@ -182,9 +196,10 @@ namespace TaskManager.Forms.ChildForms
             this.btnAddArticle.IconColor = System.Drawing.Color.White;
             this.btnAddArticle.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAddArticle.IconSize = 30;
-            this.btnAddArticle.Location = new System.Drawing.Point(733, 12);
+            this.btnAddArticle.Location = new System.Drawing.Point(1100, 18);
+            this.btnAddArticle.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAddArticle.Name = "btnAddArticle";
-            this.btnAddArticle.Size = new System.Drawing.Size(41, 34);
+            this.btnAddArticle.Size = new System.Drawing.Size(62, 52);
             this.btnAddArticle.TabIndex = 8;
             this.btnAddArticle.UseVisualStyleBackColor = false;
             this.btnAddArticle.Click += new System.EventHandler(this.btnAddArticle_Click);
@@ -202,9 +217,10 @@ namespace TaskManager.Forms.ChildForms
             this.btnEditArticle.IconColor = System.Drawing.Color.White;
             this.btnEditArticle.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEditArticle.IconSize = 30;
-            this.btnEditArticle.Location = new System.Drawing.Point(686, 12);
+            this.btnEditArticle.Location = new System.Drawing.Point(1029, 18);
+            this.btnEditArticle.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnEditArticle.Name = "btnEditArticle";
-            this.btnEditArticle.Size = new System.Drawing.Size(41, 34);
+            this.btnEditArticle.Size = new System.Drawing.Size(62, 52);
             this.btnEditArticle.TabIndex = 9;
             this.btnEditArticle.UseVisualStyleBackColor = false;
             this.btnEditArticle.Click += new System.EventHandler(this.btnEditArticle_Click);
@@ -222,9 +238,10 @@ namespace TaskManager.Forms.ChildForms
             this.btnClearArticle.IconColor = System.Drawing.Color.White;
             this.btnClearArticle.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClearArticle.IconSize = 30;
-            this.btnClearArticle.Location = new System.Drawing.Point(639, 12);
+            this.btnClearArticle.Location = new System.Drawing.Point(958, 18);
+            this.btnClearArticle.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnClearArticle.Name = "btnClearArticle";
-            this.btnClearArticle.Size = new System.Drawing.Size(41, 34);
+            this.btnClearArticle.Size = new System.Drawing.Size(62, 52);
             this.btnClearArticle.TabIndex = 10;
             this.btnClearArticle.UseVisualStyleBackColor = false;
             this.btnClearArticle.Click += new System.EventHandler(this.btnClearArticle_Click);
@@ -242,9 +259,10 @@ namespace TaskManager.Forms.ChildForms
             this.btnCopy.IconColor = System.Drawing.Color.White;
             this.btnCopy.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCopy.IconSize = 15;
-            this.btnCopy.Location = new System.Drawing.Point(733, 74);
+            this.btnCopy.Location = new System.Drawing.Point(1100, 114);
+            this.btnCopy.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCopy.Name = "btnCopy";
-            this.btnCopy.Size = new System.Drawing.Size(41, 21);
+            this.btnCopy.Size = new System.Drawing.Size(62, 32);
             this.btnCopy.TabIndex = 11;
             this.btnCopy.UseVisualStyleBackColor = false;
             this.btnCopy.Click += new System.EventHandler(this.btnCopy_Click);
@@ -254,9 +272,10 @@ namespace TaskManager.Forms.ChildForms
             this.lblIdCategory.AutoSize = true;
             this.lblIdCategory.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdCategory.ForeColor = System.Drawing.Color.White;
-            this.lblIdCategory.Location = new System.Drawing.Point(107, 31);
+            this.lblIdCategory.Location = new System.Drawing.Point(160, 48);
+            this.lblIdCategory.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblIdCategory.Name = "lblIdCategory";
-            this.lblIdCategory.Size = new System.Drawing.Size(16, 14);
+            this.lblIdCategory.Size = new System.Drawing.Size(23, 22);
             this.lblIdCategory.TabIndex = 12;
             this.lblIdCategory.Text = "0";
             // 
@@ -265,9 +284,10 @@ namespace TaskManager.Forms.ChildForms
             this.lblIdArticle.AutoSize = true;
             this.lblIdArticle.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdArticle.ForeColor = System.Drawing.Color.White;
-            this.lblIdArticle.Location = new System.Drawing.Point(327, 77);
+            this.lblIdArticle.Location = new System.Drawing.Point(490, 118);
+            this.lblIdArticle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblIdArticle.Name = "lblIdArticle";
-            this.lblIdArticle.Size = new System.Drawing.Size(16, 14);
+            this.lblIdArticle.Size = new System.Drawing.Size(23, 22);
             this.lblIdArticle.TabIndex = 13;
             this.lblIdArticle.Text = "0";
             // 
@@ -283,19 +303,64 @@ namespace TaskManager.Forms.ChildForms
             this.btnEditCategory.IconColor = System.Drawing.Color.White;
             this.btnEditCategory.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEditCategory.IconSize = 30;
-            this.btnEditCategory.Location = new System.Drawing.Point(164, 12);
+            this.btnEditCategory.Location = new System.Drawing.Point(246, 18);
+            this.btnEditCategory.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnEditCategory.Name = "btnEditCategory";
-            this.btnEditCategory.Size = new System.Drawing.Size(41, 34);
+            this.btnEditCategory.Size = new System.Drawing.Size(62, 52);
             this.btnEditCategory.TabIndex = 14;
             this.btnEditCategory.UseVisualStyleBackColor = false;
             this.btnEditCategory.Click += new System.EventHandler(this.btnEditCategory_Click);
             // 
+            // cmbFontSize
+            // 
+            this.cmbFontSize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbFontSize.FormattingEnabled = true;
+            this.cmbFontSize.Items.AddRange(new object[] {
+            "8",
+            "10",
+            "12",
+            "16",
+            "20",
+            "22",
+            "24",
+            "26"});
+            this.cmbFontSize.Location = new System.Drawing.Point(1029, 114);
+            this.cmbFontSize.Name = "cmbFontSize";
+            this.cmbFontSize.Size = new System.Drawing.Size(62, 28);
+            this.cmbFontSize.TabIndex = 15;
+            this.cmbFontSize.SelectedIndexChanged += new System.EventHandler(this.cmbFontSize_SelectedIndexChanged);
+            // 
+            // StatusSuccessPic
+            // 
+            this.StatusSuccessPic.Image = global::TaskManager.Properties.Resources.green_eye;
+            this.StatusSuccessPic.Location = new System.Drawing.Point(694, 12);
+            this.StatusSuccessPic.Name = "StatusSuccessPic";
+            this.StatusSuccessPic.Size = new System.Drawing.Size(73, 50);
+            this.StatusSuccessPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.StatusSuccessPic.TabIndex = 16;
+            this.StatusSuccessPic.TabStop = false;
+            this.StatusSuccessPic.Visible = false;
+            // 
+            // StatusErrorPic
+            // 
+            this.StatusErrorPic.Image = global::TaskManager.Properties.Resources.red_eye;
+            this.StatusErrorPic.Location = new System.Drawing.Point(694, 12);
+            this.StatusErrorPic.Name = "StatusErrorPic";
+            this.StatusErrorPic.Size = new System.Drawing.Size(73, 50);
+            this.StatusErrorPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.StatusErrorPic.TabIndex = 17;
+            this.StatusErrorPic.TabStop = false;
+            this.StatusErrorPic.Visible = false;
+            // 
             // Notes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.ClientSize = new System.Drawing.Size(786, 533);
+            this.ClientSize = new System.Drawing.Size(1179, 820);
+            this.Controls.Add(this.StatusErrorPic);
+            this.Controls.Add(this.StatusSuccessPic);
+            this.Controls.Add(this.cmbFontSize);
             this.Controls.Add(this.btnEditCategory);
             this.Controls.Add(this.lblIdArticle);
             this.Controls.Add(this.lblIdCategory);
@@ -313,11 +378,14 @@ namespace TaskManager.Forms.ChildForms
             this.Controls.Add(this.gvArticles);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Notes";
             this.Text = "Notes";
             this.Load += new System.EventHandler(this.Notes_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Notes_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.gvArticles)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StatusSuccessPic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StatusErrorPic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -340,5 +408,8 @@ namespace TaskManager.Forms.ChildForms
         private System.Windows.Forms.Label lblIdCategory;
         private System.Windows.Forms.Label lblIdArticle;
         private FontAwesome.Sharp.IconButton btnEditCategory;
+        private System.Windows.Forms.ComboBox cmbFontSize;
+        private System.Windows.Forms.PictureBox StatusSuccessPic;
+        private System.Windows.Forms.PictureBox StatusErrorPic;
     }
 }
